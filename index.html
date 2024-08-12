@@ -24,7 +24,7 @@
 
         /* Контейнер для digiseller */
         .digiseller-container {
-            height: 100%;
+            height: calc(100vh - 20px); /* Высота меньше экрана на 20px */
             padding-left: 20px; /* Отступ слева 20 пикселей */
             display: flex;
             align-items: flex-start;
@@ -52,7 +52,7 @@
         .center-image {
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: calc(50% + 110px); /* Центрируем с учетом ширины поля скрипта и отступа */
             transform: translate(-50%, -50%);
         }
 
