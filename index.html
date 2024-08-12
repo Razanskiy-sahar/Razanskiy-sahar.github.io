@@ -9,13 +9,19 @@
         body {
             margin: 0;
             padding-left: 40px; /* Отступ слева на 40 пикселей */
+            display: flex; /* Flexbox для разделения на панели */
         }
 
-        /* Верхняя панель для ссылок */
-        .top-bar {
-            display: flex;
-            justify-content: flex-end; /* Ссылки выравнены вправо */
+        /* Левая панель */
+        .sidebar {
+            width: 200px; /* Ширина панели */
             background-color: #f0f0f0; /* Цвет фона панели */
+            padding: 10px;
+        }
+
+        /* Основное содержимое */
+        .content {
+            flex-grow: 1; /* Занимает оставшееся пространство */
             padding: 10px;
         }
 
@@ -25,30 +31,24 @@
             padding: 0;
             margin: 0;
             display: flex; /* Flexbox для размещения ссылок в одну строку */
+            justify-content: flex-end; /* Размещение ссылок справа */
         }
 
         /* Ссылки */
         ul li {
             margin-left: 10px;
         }
-
-        /* Основное содержимое */
-        .content {
-            padding: 10px;
-        }
     </style>
 </head>
 <body>
-
-    <div class="top-bar">
+    <div class="sidebar">
+        <div class="digiseller-buy-standalone" data-id="4274133" data-ai="1306382" data-img="1" data-img-size="180" data-name="1" data-price="1" data-owner="1" data-no-price="0"></div>
+    </div>
+    <div class="content">
         <ul>
             <li><a href="https://plati.ru/itm/nord-premium-vpn-best-price-product-warranty/4274133?ai=1306382">https://plati.ru/itm/nord-premium-vpn-best-price-product-warranty/4274133?ai=1306382</a></li>
             <li><a href="https://digiseller.market/asp/pay_wm.asp?id_d=4274133&ai=1306382">https://digiseller.market/asp/pay_wm.asp?id_d=4274133&ai=1306382</a></li>
         </ul>
-    </div>
-
-    <div class="content">
-        <div class="digiseller-buy-standalone" data-id="4274133" data-ai="1306382" data-img="1" data-img-size="180" data-name="1" data-price="1" data-owner="1" data-no-price="0"></div>
     </div>
 
     <script>
