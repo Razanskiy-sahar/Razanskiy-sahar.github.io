@@ -14,25 +14,7 @@
             overflow: hidden;
         }
 
-        /* Левая панель для ссылок */
-        .left-panel {
-            width: 200px; /* Фиксированная ширина для ссылок */
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            padding: 20px 0 20px 20px;
-            box-sizing: border-box;
-        }
-
-        /* Ссылки */
-        .left-panel a {
-            margin-bottom: 10px;
-            text-decoration: none;
-            color: black;
-        }
-
-        /* Правый контейнер для скрипта и div */
+        /* Правый контейнер для скрипта, ссылок и центра */
         .main-content {
             flex-grow: 1;
             display: flex;
@@ -40,15 +22,30 @@
             box-sizing: border-box;
         }
 
-        /* Элемент digiseller */
+        /* Контейнер для digiseller */
         .digiseller-container {
-            width: calc(100% - 220px); /* Учитываем отступы и ширину левой панели */
             height: 100%;
             padding-left: 20px; /* Отступ слева 20 пикселей */
-            box-sizing: border-box;
             display: flex;
+            align-items: flex-start;
+            box-sizing: border-box;
+        }
+
+        /* Правая панель для ссылок */
+        .right-panel {
+            display: flex;
+            flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Ссылки */
+        .right-panel a {
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: black;
         }
 
         /* Центрирование картинки */
@@ -68,16 +65,6 @@
 </head>
 <body>
 
-    <!-- Левая панель для ссылок -->
-    <div class="left-panel">
-        <a href="https://plati.ru/itm/nord-premium-vpn-best-price-product-warranty/4274133?ai=1306382">
-            https://plati.ru/itm/nord-premium-vpn-best-price-product-warranty/4274133?ai=1306382
-        </a>
-        <a href="https://digiseller.market/asp/pay_wm.asp?id_d=4274133&ai=1306382">
-            https://digiseller.market/asp/pay_wm.asp?id_d=4274133&ai=1306382
-        </a>
-    </div>
-
     <!-- Правый контейнер для скрипта и основного содержимого -->
     <div class="main-content">
         <!-- Контейнер для digiseller -->
@@ -94,6 +81,16 @@
                 }(document);
             </script>
             <div class="digiseller-buy-standalone" data-id="4274133" data-ai="1306382" data-img="1" data-img-size="180" data-name="1" data-price="1" data-owner="1" data-no-price="0"></div>
+        </div>
+
+        <!-- Правая панель для ссылок -->
+        <div class="right-panel">
+            <a href="https://plati.ru/itm/nord-premium-vpn-best-price-product-warranty/4274133?ai=1306382">
+                https://plati.ru/itm/nord-premium-vpn-best-price-product-warranty/4274133?ai=1306382
+            </a>
+            <a href="https://digiseller.market/asp/pay_wm.asp?id_d=4274133&ai=1306382">
+                https://digiseller.market/asp/pay_wm.asp?id_d=4274133&ai=1306382
+            </a>
         </div>
 
         <!-- Маленькая картинка в центре -->
