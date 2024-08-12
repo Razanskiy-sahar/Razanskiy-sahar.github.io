@@ -24,7 +24,7 @@
 
         /* Контейнер для digiseller */
         .digiseller-container {
-            height: calc(100vh - 20px); /* Высота меньше экрана на 20px */
+            height: calc(100vh - 40px); /* Высота на 40px меньше экрана */
             padding-left: 20px; /* Отступ слева 20 пикселей */
             display: flex;
             align-items: flex-start;
@@ -52,8 +52,8 @@
         .center-image {
             position: absolute;
             top: 50%;
-            left: calc(50% + 110px); /* Центрируем с учетом ширины поля скрипта и отступа */
-            transform: translate(-50%, -50%);
+            left: calc(100% - 50px); /* Сместить картинку влево от правого края */
+            transform: translateX(-100%);
         }
 
         /* Пример маленькой картинки */
@@ -93,7 +93,7 @@
             </a>
         </div>
 
-        <!-- Маленькая картинка в центре -->
+        <!-- Маленькая картинка в центре оставшегося пространства -->
         <div class="center-image">
             <img src="https://via.placeholder.com/100" alt="Маленькая картинка">
         </div>
