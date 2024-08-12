@@ -3,65 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zamina mina eh eh</title>
+    <title>Страница с элементами</title>
     <style>
         /* Основной стиль для body */
         body {
             margin: 0;
-            padding-left: 40px; /* Отступ слева на 40 пикселей */
-            display: flex; /* Flexbox для размещения элементов по горизонтали */
+            display: flex;
+            height: 100vh; /* Высота экрана */
+            box-sizing: border-box;
+            overflow: hidden;
         }
 
-        /* Левая панель для скрипта и div */
-        .sidebar {
-            width: 200px; /* Фиксированная ширина левой панели */
-            padding: 0px;
-            hight: 600ph;
-            box-sizing: border-box; /* Учет padding в ширине */
-        }
-
-        /* Основное содержимое */
-        .content {
-            flex-grow: 1; /* Занимает оставшееся пространство */
-            padding: 10px;
+        /* Левая панель для ссылок */
+        .left-panel {
+            width: 200px; /* Фиксированная ширина для ссылок */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 20px 0 20px 20px;
             box-sizing: border-box;
         }
 
-        /* Стили для списка */
-        ul {
-            list-style-type: none; /* Убирает маркеры */
-            padding: 0;
-            margin: 0;
+        /* Ссылки */
+        .left-panel a {
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: black;
         }
 
-        /* Ссылки */
-        ul li {
-            margin-bottom: 10px;
+        /* Правый контейнер для скрипта и div */
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /* Элемент digiseller */
+        .digiseller-container {
+            width: calc(100% - 220px); /* Учитываем отступы и ширину левой панели */
+            height: 100%;
+            padding-left: 20px; /* Отступ слева 20 пикселей */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        /* Центрирование картинки */
+        .center-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Пример маленькой картинки */
+        .center-image img {
+            width: 100px;
+            height: 100px;
         }
     </style>
 </head>
 <body>
 
-    <div class="sidebar">
-        <script>
-            !function(e){
-                var l=function(l){return e.cookie.match(new RegExp("(?:^|; )digiseller-"+l+"=([^;]*)"))},
-                i=l("lang"),s=l("cart_uid"),
-                t=i?"&lang="+i[1]:"",d=s?"&cart_uid="+s[1]:"",r=e.getElementsByTagName("head")[0]||e.documentElement,
-                n=e.createElement("link"),a=e.createElement("script");
-                n.type="text/css",n.rel="stylesheet",n.id="digiseller-css",n.href="//shop.digiseller.com/xml/store2_css.asp?seller_id=1306382",
-                a.async=!0,a.id="digiseller-js",a.src="//digiseller.com/store2/digiseller-api.js.asp?seller_id=1306382&lang=en-US"+t+d,
-                !e.getElementById(n.id)&&r.appendChild(n),!e.getElementById(a.id)&&r.appendChild(a)
-            }(document);
-        </script>
-        <div class="digiseller-buy-standalone" data-id="4274133" data-ai="1306382" data-img="1" data-img-size="180" data-name="1" data-price="1" data-owner="1" data-no-price="0"></div>
+    <!-- Левая панель для ссылок -->
+    <div class="left-panel">
+        <a href="https://plati.ru/itm/nord-premium-vpn-best-price-product-warranty/4274133?ai=1306382">
+            https://plati.ru/itm/nord-premium-vpn-best-price-product-warranty/4274133?ai=1306382
+        </a>
+        <a href="https://digiseller.market/asp/pay_wm.asp?id_d=4274133&ai=1306382">
+            https://digiseller.market/asp/pay_wm.asp?id_d=4274133&ai=1306382
+        </a>
     </div>
-    
-   body {
-        <ul>
-           <li><a href="https://plati.ru/itm/nord-premium-vpn-best-price-product-warranty/4274133?ai=1306382">https://plati.ru/itm/nord-premium-vpn-best-price-product-warranty/4274133?ai=1306382</a></li>
-           <li><a href="https://digiseller.market/asp/pay_wm.asp?id_d=4274133&ai=1306382">https://digiseller.market/asp/pay_wm.asp?id_d=4274133&ai=1306382</a></li>
-        </ul>
-}
+
+    <!-- Правый контейнер для скрипта и основного содержимого -->
+    <div class="main-content">
+        <!-- Контейнер для digiseller -->
+        <div class="digiseller-container">
+            <script>
+                !function(e){
+                    var l=function(l){return e.cookie.match(new RegExp("(?:^|; )digiseller-"+l+"=([^;]*)"))},
+                    i=l("lang"),s=l("cart_uid"),
+                    t=i?"&lang="+i[1]:"",d=s?"&cart_uid="+s[1]:"",r=e.getElementsByTagName("head")[0]||e.documentElement,
+                    n=e.createElement("link"),a=e.createElement("script");
+                    n.type="text/css",n.rel="stylesheet",n.id="digiseller-css",n.href="//shop.digiseller.com/xml/store2_css.asp?seller_id=1306382",
+                    a.async=!0,a.id="digiseller-js",a.src="//digiseller.com/store2/digiseller-api.js.asp?seller_id=1306382&lang=en-US"+t+d,
+                    !e.getElementById(n.id)&&r.appendChild(n),!e.getElementById(a.id)&&r.appendChild(a)
+                }(document);
+            </script>
+            <div class="digiseller-buy-standalone" data-id="4274133" data-ai="1306382" data-img="1" data-img-size="180" data-name="1" data-price="1" data-owner="1" data-no-price="0"></div>
+        </div>
+
+        <!-- Маленькая картинка в центре -->
+        <div class="center-image">
+            <img src="https://via.placeholder.com/100" alt="Маленькая картинка">
+        </div>
+    </div>
+
 </body>
 </html>
