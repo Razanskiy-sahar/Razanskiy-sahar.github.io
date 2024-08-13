@@ -13,7 +13,7 @@
         .shrinkable-div {
             margin-left: 25px; /* Отступ слева 25px */
             transform-origin: top left;
-            will-change: transform; /* Оптимизация для анимации/трансформации */
+            will-change: transform;
         }
     </style>
 </head>
@@ -40,22 +40,19 @@
             !e.getElementById(n.id)&&r.appendChild(n),!e.getElementById(a.id)&&r.appendChild(a)
         }(document);
 
-        // Автоматическое сужение до taskbar
         function adjustHeight() {
             var content = document.getElementById('content');
             var windowHeight = window.innerHeight; // Высота окна браузера
-            var contentHeight = content.getBoundingClientRect().height; // Высота содержимого
+            var contentHeight = content.scrollHeight; // Полная высота содержимого
 
             if (contentHeight > windowHeight) {
                 var scale = windowHeight / contentHeight; // Вычисляем масштаб
-                content.style.transform = `scaleY(${scale})`;
+                content.style.transform = `scaleY(${scale})`; // Применяем масштаб
             }
         }
 
-        // Вызываем при загрузке страницы
+        // Вызываем при загрузке страницы и при изменении размера окна
         window.onload = adjustHeight;
-
-        // Вызываем при изменении размера окна
         window.onresize = adjustHeight;
     </script>
 </body>
